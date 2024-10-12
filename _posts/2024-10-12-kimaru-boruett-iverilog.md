@@ -43,7 +43,8 @@ Our project will be a 2x1 multiplexer. It therefore has 2 input lines and one se
 |*Logic Diagram for 2x1 Multiplexer*|
 
 Below is the truth table for the above 2x1 Multiplexer. When S=0, output will be switched to in1 input, then when S=1, output will be switched to in2 output.
-|![Truth Table for 2x1 Multiplexer](/assets/iverilog/truth_table_mux.webp)|
+
+|![Truth Table for 2x1 Multiplexer](/assets/iverilog/truth_table_mux.webp){style="display: block; margin: 0 auto"}|
 |:--:| 
 |*Truth Table for 2x1 Multiplexer*|
 
