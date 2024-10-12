@@ -34,19 +34,20 @@ A multiplexer is a combinational logic circuit that’s used to select only one 
 
 Our project will be a 2x1 multiplexer. It therefore has 2 input lines and one select line.
 
-[Block Diagram for 2x1 Multiplexer] (./assets/iverilog/block_diag_mux.webp)
+[Block Diagram for 2x1 Multiplexer] (../assets/iverilog/block_diag_mux.webp)
 
-[Logic Diagram for 2x1 Multiplexer] (./assets/iverilog/logic_diag_mux.webp)
+[Logic Diagram for 2x1 Multiplexer] (../assets/iverilog/logic_diag_mux.webp)
 
 Below is the truth table for the above 2x1 Multiplexer. When S=0, output will be switched to in1 input, then when S=1, output will be switched to in2 output.
 
-[Block Diagram for 2x1 Multiplexer] (./assets/iverilog/truth_table_mux.webp)
+[Block Diagram for 2x1 Multiplexer] (../assets/iverilog/truth_table_mux.webp)
 
 Now that we have some context about the 2x1 multiplexer, we’ll proceed to implement it in Verilog and develop a testbench to simulate its behavior.
 
 Organizing our files is a great practice. Here’s how we can navigate to the ```Documents``` directory, create a ```DigitalDesign``` folder, and then create a ```Multiplexer_2_1``` folder within it, assuming we're starting from the home directory:
 
 ```
+    systemverilog
 cd Documents
 mkdir DigitalDesign
 cd DigitalDesign
@@ -126,7 +127,7 @@ To view the waveform, we are going to use GTKWave. GTKWave allows we to interact
 
 A GTKWave window will appear.
 
-[GTKWave Window After running Command on Terminal] (./assets/iverilog/GTKWave_window_one.webp)
+[GTKWave Window After running Command on Terminal] (../assets/iverilog/GTKWave_window_one.webp)
 
 Select the Appropriate Module: In the left panel of the GTKWave window, we will see a list of modules. Look for the module associated with our simulation, which in this case is likely named “multiplexer_2_1_tb.” It will be represented with a tree-like icon.
 
@@ -136,7 +137,7 @@ Display Waveforms: Once we’ve selected the signals, the main waveform window w
 
 Adjust the Scale: We can adjust the scale of the waveform to better visualize changes. Use the zoom in and zoom out icons or the scaling options in the GTKWave toolbar to zoom in or out until we can clearly see the waveform changes.
 
-[GTKWave Window with Waveform] (./assets/iverilog/GTKWave_window_two.webp)
+[GTKWave Window with Waveform] (../assets/iverilog/GTKWave_window_two.webp)
 
 
 At 5ns: The input a becomes 1, and as a result, the output y also becomes 1 because the select pin is set to 0, meaning it selects input a.
