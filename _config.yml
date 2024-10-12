@@ -1,3 +1,5 @@
 name: Kimaru Boruett, Engineering Student
 markdown: kramdown
+highlighter: rouge
+    input: GFM
 permalink: /blog/:year/:month/:day/:title
