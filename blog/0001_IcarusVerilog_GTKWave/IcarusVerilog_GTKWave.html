@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Installing Icarus Verilog and GTKWave on Ubuntu for Verilog Simulation</title>
+  <link rel="stylesheet" href="../../reset.css" />
+  <link rel="stylesheet" href="../../index.css" />
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Installing Icarus Verilog and GTKWave on Ubuntu for
+Verilog Simulation</h1>
+</header>
+<p><a href="../../index.html">Home</a> <a href="../blog.html">Blog
+Index</a> Kimaru Boruett, October 2023</p>
+<p>This is a repost of a blog post I made on medium sometime back.</p>
+<p>Hardware Description Languages (HDLs) are employed to define the
+operations of electronic and digital systems. Verilog is a notable
+example. In the industry, other frequently utilized HDLs include VHDL
+and SystemVerilog, which serve dual purposes for both design and
+verification. Additionally, there are less widely recognized but still
+effective HDLs like Chisel (built on Scala), Hardcaml (built on OCaml),
+and cocotb, which is commonly utilized for creating testbenches for
+VHDL, SystemVerilog, and Verilog in Python.</p>
+<p>In this tutorial, we are going to install Icarus Verilog and GTKWave,
+then as an example, write a multiplexer and its testbench in
+Verilog.</p>
+<h1 id="installing-icarus-verilog">Installing Icarus Verilog</h1>
+<p>Icarus Verilog is an open source compiler for the Verilog HDL.</p>
+<p>Update Ubuntu package list, then install Icarus Verilog using the apt
+install command</p>
+<pre class="bash"><code>sudo apt update
+sudo apt install iverilog</code></pre>
+<h1 id="installing-gtkwave">Installing GTKWave</h1>
+<p>GTKWave is a waveform viewer that seamlessly works with Icarus
+Verilog to display simulation results. It is conveniently available in
+Ubuntu’s apt package list, therefore we will use the
+<code>apt install</code> command once more.</p>
+<pre class="bash"><code>sudo apt install gtkwave</code></pre>
+<p>With both Icarus Verilog and GTKWave installed, we are going to
+create a simple Verilog project to verify and test their
+functionality.</p>
+<h1 id="creating-a-multiplexer-in-verilog">Creating a Multiplexer in
+Verilog</h1>
+<p>A multiplexer is a combinational logic circuit that’s used to select
+only one input from several inputs based on selection lines. In most
+cases there usually are 2^n input lines and n selection lines whose
+combinations determine which input is selected.</p>
+<p>Our project will be a 2x1 multiplexer. It therefore has 2 input lines
+and one select line.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><img src="artifacts/block_diag_mux.webp"
+alt="Block Diagram for 2x1 Multiplexer" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><em>Block Diagram for 2x1
+Multiplexer</em></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><img src="artifacts/logic_diag_mux.webp"
+alt="Logic Diagram for 2x1 Multiplexer" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><em>Logic Diagram for 2x1
+Multiplexer</em></td>
+</tr>
+</tbody>
+</table>
+<p>Below is the truth table for the above 2x1 Multiplexer. When S=0,
+output will be switched to in1 input, then when S=1, output will be
+switched to in2 output.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><img
+src="artifacts/truth_table_mux.webp"
+alt="Truth Table for 2x1 Multiplexer" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><em>Truth Table for 2x1
+Multiplexer</em></td>
+</tr>
+</tbody>
+</table>
+<p>Now that we have some context about the 2x1 multiplexer, we’ll
+proceed to implement it in Verilog and develop a testbench to simulate
+its behavior.</p>
+<p>Organizing our files is a great practice. Here’s how we can navigate
+to the <code>Documents</code> directory, create a
+<code>DigitalDesign</code> folder, and then create a
+<code>Multiplexer_2_1</code> folder within it, assuming we’re starting
+from the home directory:</p>
+<pre class="bash"><code>cd Documents
+mkdir DigitalDesign
+cd DigitalDesign
+mkdir Multiplexer_2_1
+cd Multiplexer_2_1</code></pre>
+<p>Now, within the <code>Multiplexer_2_1</code> folder located in the
+<code>DigitalDesign</code> directory, we’re ready to implement our
+Verilog project. We’ll use the nano text editor to create a Verilog file
+for the multiplexer.</p>
+<pre class="bash"><code>nano multiplexer_2_1.v</code></pre>
+<p>Below is the Verilog code for the multiplexer. I recommend typing the
+code out by yourself while following along.</p>
+<pre class="verilog"><code>module multiplexer_2_1(
+  input a,
+  input b,
+  input select,
+  output y
+);
+
+assign y = (select)?b:a;
+endmodule</code></pre>
+<p>Save the file(Ctrl+O+Enter) and exit(Ctrl+X) the text editor</p>
+<p>Now we are going to write the testbench</p>
+<pre class="bash"><code>nano multiplexer_2_1_tb.v</code></pre>
+<p>Below is the Verilog testbench</p>
+<pre class="verilog"><code>`timescale 1ns/100ps 
+module multiplexer_2_1_tb;
+
+ //inputs
+ reg a, b, select;
+ //outputs
+ wire y;
+
+ multiplexer_2_1 u0_DUT(
+  .a(a),
+  .b(b),
+  .select(select),
+  .y(y)
+ );
+
+ //initialize inputs
+
+ initial begin
+//simulation files dumped to the test_2_1mux file
+  $dumpfile(&quot;test_2_1mux.vcd&quot;);
+  $dumpvars(0,multiplexer_2_1_tb);
+  a=1&#39;b0;b=1&#39;b0; select=1&#39;b0;
+  #5 a=1&#39;b1; 
+  #5 select = 1&#39;b1;
+  #5 b=1&#39;b1;
+  #5 a=1&#39;b0;
+  #5 $finish;
+ end
+endmodule</code></pre>
+<p>Once we have saved and closed the file we can now use Icarus Verilog
+to compile our sources.</p>
+<pre class="bash"><code>iverilog -o mux_wave_2_1 multiplexer_2_1.v multiplexer_tb_2_1.v</code></pre>
+<p>Using the <code>ls</code> command we will see a new file by the name
+<code>mux_wave_2_1</code> produced when our sources are compiled. To run
+it we are going to use the <code>vvp</code> command, commonly associated
+with iverilog as its simulation runtime engine, which will produce
+another file by the name <code>test_2_1mux.vcd</code> as defined in our
+testbench code.</p>
+<pre class="bash"><code>vvp mux_wave_2_1</code></pre>
+<p>To view the waveform, we are going to use GTKWave. GTKWave allows we
+to interactively explore and analyze the waveform data generated by our
+Verilog simulations, making it a key tool for debugging and
+understanding the behavior of our designs.</p>
+<pre class="bash"><code>gtkwave test_2_1mux.vcd</code></pre>
+<p>A GTKWave window will appear.</p>
+<table>
+<colgroup>
+<col style="width: 100%" />
+</colgroup>
+<thead>
+<tr>
+<th style="text-align: center;"><img
+src="artifacts/GTKWave_window_one.webp"
+alt="GTKWave Window After running Command on Terminal" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><em>GTKWave Window After running Command
+on Terminal</em></td>
+</tr>
+</tbody>
+</table>
+<p>Select the Appropriate Module: In the left panel of the GTKWave
+window, we will see a list of modules. Look for the module associated
+with our simulation, which in this case is likely named
+“multiplexer_2_1_tb.” It will be represented with a tree-like icon.</p>
+<p>Select Signals to View: In the module tree, select the signals we
+want to view in the bottom panel. To do this, simply click on the
+signals one by one in the order we’d like to view them. They will appear
+in the bottom panel.</p>
+<p>Display Waveforms: Once we’ve selected the signals, the main waveform
+window will populate itself with the selected signals. We will see the
+waveforms representing the behavior of these signals over time.</p>
+<p>Adjust the Scale: We can adjust the scale of the waveform to better
+visualize changes. Use the zoom in and zoom out icons or the scaling
+options in the GTKWave toolbar to zoom in or out until we can clearly
+see the waveform changes.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><img
+src="artifacts/GTKWave_window_two.webp"
+alt="GTKWave Window with Waveform" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><em>GTKWave Window with
+Waveform</em></td>
+</tr>
+</tbody>
+</table>
+<p>At 5ns: The input a becomes 1, and as a result, the output y also
+becomes 1 because the select pin is set to 0, meaning it selects input
+a.</p>
+<p>At 10ns: The select pin is set to 1, causing the multiplexer to
+switch its selection to input b. Consequently, y drops to 0 because it
+now reflects the value of b.</p>
+<p>At 15ns: Input b becomes 1, causing the output y to change to 1 since
+the multiplexer is still selecting input b due to the earlier set select
+value.</p>
+<p>At 20ns: Input a becomes 0, but it doesn’t affect the output y at
+this point since the select pin remains at 1, continuing to select input
+b. Thus, y remains at 1.</p>
+<p>We can modify the testbench variables then re-run the simulation
+followed by the accompanying steps to observe how our changes affect the
+waveform.</p>
+<p>You can find the code in the github repository linked below.</p>
+<p><a href="https://github.com/kmarulab/RTL_100Days">code
+location</a></p>
+<p>My inspiration for this project and writing came from Raul Behl’s
+“100 Days of RTL,” where he employed SystemVerilog. Throughout this
+endeavor, he undertook progressively complex projects as the days
+advanced. I hope to do the same, probably not in 100 Days😂</p>
+<p>Our next project will be a D flip-flop.</p>
+<p>Thank you!</p>
+<p>Sources Cited</p>
+<pre><code>Mano, M. M., &amp; Ciletti, M. D. (2019). Digital Design: With an introduction to the Verilog HDL, VHDL, and systemverilog. Pearson Education.
+GeeksforGeeks. (2023, September 19). Multiplexers in digital logic. [Geeks for Geeks](https://www.geeksforgeeks.org/multiplexers-in-digital-logic/)</code></pre>
+</body>
+</html>
