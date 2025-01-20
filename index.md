@@ -1,6 +1,6 @@
 ---
 title: Kimaru Boruett
-subtitle: Hardware Engineer
+subtitle: Electrical Engineer
 version: v0.0.2
 email: emkboruett@gmail.com
 linkedin: https://www.linkedin.com/in/kimaru-boruett-b03699169
