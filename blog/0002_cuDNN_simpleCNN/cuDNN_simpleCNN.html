@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Verifying cuDNN Installation with a Simple Convolutional Network</title>
+  <link rel="stylesheet" href="../../reset.css" />
+  <link rel="stylesheet" href="../../index.css" />
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Verifying cuDNN Installation with a Simple
+Convolutional Network</h1>
+</header>
+<p><a href="../../index.html">Home</a> <a href="../blog.html">Blog
+Index</a> Kimaru Boruett, December 2024</p>
+<p><img src="artifacts/cuDNN.webp" alt="cuDNN Logo"></p>
+<p>I’ve had my RTX 2060 and Razer Chroma X eGPU for a while now, but I
+haven’t fully tapped into its potential until recently. Over the past
+couple of hours, I’ve been experimenting with CUDA sample CLI programs
+and successfully installed cuDNN. In this blog post, I’ll walk through a
+simple example that demonstrates the core operations of training a basic
+convolutional neural network using NVIDIA’s cuDNN library. For context,
+I’m working on a Lenovo X1 Carbon Gen 6 running Ubuntu 24.04 and an
+eGPU. If you’re interested in the installation process for both CUDA and
+cuDNN, feel free to ask in the comments. After some trial and error
+following NVIDIA’s online documentation, I was able to get CUDA 12.6 and
+cuDNN for CUDA 12 up and running.</p>
+<h2 id="what-is-cudnn">What is cuDNN?</h2>
+<p>cuDNN is a GPU-accelerated library by NVIDIA designed to provide
+high-performance primitives for deep learning applications. It is widely
+used in frameworks like TensorFlow and PyTorch, offering optimized
+operations like convolutions, pooling, and activation functions. By
+leveraging cuDNN, you can accelerate training and inference of deep
+neural networks on GPUs, achieving significant speedups compared to
+CPU-based processing.</p>
+<h2 id="our-example-basic_training_cudnn.cu">Our Example —
+basic_training_cudnn.cu</h2>
+<p>The link to the full code has been provided at the end of this
+article. The code initializes a cuDNN context, sets up tensors for
+input/output data, creates a convolutional layer, and demonstrates the
+forward and backward passes. An important point to note is that the code
+is not a preview of the full training pipeline, it is meant to verify
+that cuDNN works. I will highlight what it does and the key snippets</p>
+<ol type="1">
+<li><strong>Initializing cuDNN</strong></li>
+</ol>
+<p>Here, we create a cuDNN handle (<code>cudnn</code>) using
+<code>cudnnCreate</code>. This handle is essential as it acts as the
+main context for all cuDNN operations. The <code>checkCUDNN</code> macro
+ensures we handle any errors during initialization.</p>
+<pre><code>cudnnHandle_t cudnn;checkCUDNN(cudnnCreate(&amp;cudnn));</code></pre>
+<ol start="2" type="1">
+<li><strong>Setting Up Tensor Descriptors</strong></li>
+</ol>
+<p>In cuDNN, tensors are described using tensor descriptors. In this
+step, we create a descriptor for the input data (a 5x5 image with a
+batch size of 1 and 1 channel) and define its format using
+<code>cudnnSetTensor4dDescriptor</code>. The descriptor tells cuDNN how
+to interpret the input data, including its dimensions and layout.</p>
+<pre><code>int batch_size = 1, channels = 1, height = 5, width = 5;cudnnTensorDescriptor_t input_descriptor;checkCUDNN(cudnnCreateTensorDescriptor(&amp;input_descriptor));checkCUDNN(cudnnSetTensor4dDescriptor(    input_descriptor, CUDNN_TENSOR_NHWC, CUDNN_DATA_FLOAT,    batch_size, channels, height, width));cudnnTensorDescriptor_t output_descriptor;int output_height = 3, output_width = 3; checkCUDNN(cudnnCreateTensorDescriptor(&amp;output_descriptor));checkCUDNN(cudnnSetTensor4dDescriptor(    output_descriptor, CUDNN_TENSOR_NHWC, CUDNN_DATA_FLOAT,    batch_size, channels, output_height, output_width));</code></pre>
+<p>3. <strong>Creating the Convolution Layer</strong></p>
+<p>This snippet sets up the convolution filter. In this case, we use a
+3x3 filter with one input and output channel.
+<code>cudnnSetFilter4dDescriptor</code> defines the filter’s dimensions
+and data type.</p>
+<pre><code>cudnnFilterDescriptor_t filter_descriptor;checkCUDNN(cudnnCreateFilterDescriptor(&amp;filter_descriptor));checkCUDNN(cudnnSetFilter4dDescriptor(filter_descriptor, CUDNN_DATA_FLOAT, CUDNN_TENSOR_NHWC, channels, channels, 3, 3));</code></pre>
+<p>4. <strong>Defining the Convolution Operation</strong></p>
+<p>The <code>cudnnCreateConvolutionDescriptor</code> function defines
+the convolution operation’s parameters. We specify <strong>valid
+padding</strong> (0 padding), a <strong>stride of 1</strong>, and a
+<strong>dilation factor of 1</strong>. Additionally, we set
+<code>CUDNN_CROSS_CORRELATION</code>, which is commonly used for
+convolution operations.</p>
+<pre><code>cudnnConvolutionDescriptor_t convolution_descriptor;checkCUDNN(cudnnCreateConvolutionDescriptor(&amp;convolution_descriptor));checkCUDNN(cudnnSetConvolution2dDescriptor(convolution_descriptor, 0, 0, 1, 1, 1, 1, CUDNN_CROSS_CORRELATION, CUDNN_DATA_FLOAT));</code></pre>
+<p>5. <strong>Memory Allocation for Input, Filter, and
+Output</strong></p>
+<p>Before we can run the convolution, we need to allocate memory on the
+GPU for the input data, filter weights, and output data. Here, we use
+<code>cudaMalloc</code> to allocate space on the GPU, with sizes
+calculated based on the input dimensions and filter size.</p>
+<pre><code>cudaMalloc(&amp;d_input, input_size);cudaMalloc(&amp;d_filter, filter_size);cudaMalloc(&amp;d_output, output_size);</code></pre>
+<p>6. <strong>Forward Convolution Pass</strong></p>
+<p>This is the core of the program — the forward pass of the convolution
+operation. The function <code>cudnnConvolutionForward</code> applies the
+convolution on the input data using the defined filter. The result is
+stored in the output tensor. The
+<code>CUDNN_CONVOLUTION_FWD_ALGO_IMPLICIT_GEMM</code> algorithm is used,
+which is an efficient choice for small filters.</p>
+<pre><code>checkCUDNN(cudnnConvolutionForward(cudnn, &amp;alpha, input_descriptor, d_input, filter_descriptor, d_filter, convolution_descriptor, CUDNN_CONVOLUTION_FWD_ALGO_IMPLICIT_GEMM, nullptr, 0, &amp;beta, output_descriptor, d_output));</code></pre>
+<p>7. <strong>Backward Convolution Pass (Gradient
+Computation)</strong></p>
+<p>In the backward pass, we compute the gradients for the filter using
+<code>cudnnConvolutionBackwardFilter</code>. This is crucial for
+updating the filter weights during training. It calculates the
+derivative of the loss with respect to the filter weights, enabling the
+model to learn from the data.</p>
+<pre><code>checkCUDNN(cudnnConvolutionBackwardFilter(cudnn, &amp;alpha, input_descriptor, d_input, output_descriptor, d_output, convolution_descriptor, CUDNN_CONVOLUTION_BWD_FILTER_ALGO_0, nullptr, 0, &amp;beta, filter_descriptor, d_grad_filter));</code></pre>
+<p>8. <strong>Memory Cleanup</strong></p>
+<p>Once all operations are completed, it’s important to release the
+allocated GPU memory and destroy cuDNN descriptors and the cuDNN handle.
+This ensures that resources are freed, preventing memory leaks and
+ensuring optimal performance for future operations.</p>
+<pre><code>cudaFree(d_input);cudaFree(d_filter);cudaFree(d_output);cudaFree(d_grad_filter);cudnnDestroyTensorDescriptor(input_descriptor);cudnnDestroyTensorDescriptor(output_descriptor);cudnnDestroyFilterDescriptor(filter_descriptor);cudnnDestroyConvolutionDescriptor(convolution_descriptor);cudnnDestroy(cudnn);</code></pre>
+<h2 id="running-the-code">Running the Code</h2>
+<p>Assuming you have CUDA and cuDNN installed correctly, proceed to:</p>
+<p><strong>Create and Compile the Code:</strong> Save the code into a
+<code>.cu</code> file (e.g., <code>basic_training_cudnn.cu</code>). You
+can compile it using <code>nvcc</code> (NVIDIA’s CUDA Compiler). Here’s
+the command to compile the file:</p>
+<pre><code>nvcc -o basic_training_cudnn basic_training_cudnn.cu -lcudnn</code></pre>
+<p><strong>Run the Program:</strong> Once the code is compiled, you can
+run it on your system using:</p>
+<pre><code>./basic_training_cudnn</code></pre>
+<p>This will execute the program, and you should see output related to
+the convolution operation being performed, along with any errors or
+success messages.</p>
+<p><strong>Expected Output:</strong></p>
+<pre><code>cuDNN initialization successful.Forward pass completed.Backward pass completed.Memory cleanup successful.</code></pre>
+<h2 id="conclusion">Conclusion</h2>
+<p>This simple example showcases the fundamental steps involved in
+training a convolutional neural network layer using cuDNN. Although it
+focuses on a single convolutional layer, the key operations —
+initializing cuDNN, setting up tensor and convolution descriptors,
+performing both forward and backward passes, and cleaning up — form the
+foundation for building more complex deep learning models. I’m truly
+excited about the potential of cuDNN and look forward to diving deeper
+into its capabilities as I continue my learning journey.</p>
+<p><a
+href="https://github.com/kmarulab/cuda-learning/blob/main/basic_training_cudnn.cu">Full
+Code</a></p>
+</body>
+</html>
