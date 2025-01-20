@@ -52,4 +52,4 @@ BSc Engineering BA Mathematics - Swarthmore College '26
 
 
 ## Shout-out
-Huge thanks to [Oskar Wickström](https://x.com/owickstrom) for their [article](https://owickstrom.github.io/the-monospace-web/) and template of which this website is built from. Many thanks to [Ryan Ward] (https://x.com/crank1_) from whom I first found out about this template on X.
+Huge thanks to [Oskar Wickström](https://x.com/owickstrom) for their [article](https://owickstrom.github.io/the-monospace-web/) and template of which this website is built from. Many thanks to [Ryan Ward](https://x.com/crank1_) from whom I first found out about this template on X.
