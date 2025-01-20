@@ -1,10 +1,10 @@
 ---
 title: Kimaru Boruett
 subtitle: Hardware Engineer
-version: v1.0.0
+version: v0.0.2
 email: emkboruett@gmail.com
 linkedin: https://www.linkedin.com/in/kimaru-boruett-b03699169
-resume: https://nbviewer.org/github/rwardd/rwardd.github.io/blob/main/resume.pdf
+resume: coming soon
 github: https://github.com/kmarulab
 blog: https://kmarulab.github.io/blog/blog.html
 ---
