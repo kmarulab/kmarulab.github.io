@@ -1,8 +1,8 @@
 ---
-layout: post
-title: "Installing Icarus Verilog and GTKWave on Ubuntu for Verilog Simulation"
-date: 2024-10-12
+title: Installing Icarus Verilog and GTKWave on Ubuntu for Verilog Simulation
 ---
+[Home](../../index.html) [Blog Index](../blog.html)
+Kimaru Boruett, October 2023
 
 This is a repost of a blog post I made on medium sometime back. 
 
@@ -34,17 +34,17 @@ A multiplexer is a combinational logic circuit that’s used to select only one 
 
 Our project will be a 2x1 multiplexer. It therefore has 2 input lines and one select line.
 
-|![Block Diagram for 2x1 Multiplexer](/assets/iverilog/block_diag_mux.webp)|
+|![Block Diagram for 2x1 Multiplexer](artifacts/block_diag_mux.webp)|
 |:--:| 
 |*Block Diagram for 2x1 Multiplexer*|
 
-|![Logic Diagram for 2x1 Multiplexer](/assets/iverilog/logic_diag_mux.webp)|
+|![Logic Diagram for 2x1 Multiplexer](artifacts/logic_diag_mux.webp)|
 |:--:| 
 |*Logic Diagram for 2x1 Multiplexer*|
 
 Below is the truth table for the above 2x1 Multiplexer. When S=0, output will be switched to in1 input, then when S=1, output will be switched to in2 output.
 
-|![Truth Table for 2x1 Multiplexer](/assets/iverilog/truth_table_mux.webp)|
+|![Truth Table for 2x1 Multiplexer](artifacts/truth_table_mux.webp)|
 |:--:| 
 |*Truth Table for 2x1 Multiplexer*|
 
@@ -138,7 +138,7 @@ gtkwave test_2_1mux.vcd
 
 A GTKWave window will appear.
 
-|![GTKWave Window After running Command on Terminal](/assets/iverilog/GTKWave_window_one.webp)|
+|![GTKWave Window After running Command on Terminal](artifacts/GTKWave_window_one.webp)|
 |:--:| 
 |*GTKWave Window After running Command on Terminal*|
 
@@ -150,7 +150,7 @@ Display Waveforms: Once we’ve selected the signals, the main waveform window w
 
 Adjust the Scale: We can adjust the scale of the waveform to better visualize changes. Use the zoom in and zoom out icons or the scaling options in the GTKWave toolbar to zoom in or out until we can clearly see the waveform changes.
 
-|![GTKWave Window with Waveform](/assets/iverilog/GTKWave_window_two.webp)|
+|![GTKWave Window with Waveform](artifacts/GTKWave_window_two.webp)|
 |:--:| 
 |*GTKWave Window with Waveform*|
 
