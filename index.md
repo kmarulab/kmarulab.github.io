@@ -15,8 +15,6 @@ Hello, my name is Kimaru Boruett; I am an international student from Kenya at Sw
 Other than sinking deep into code or grinding on engineering homework, you'll find me at Swarthmore's Ware Pool. Currently, I am working on comfortably doing a 200m medley by the end of the semester. I'm a massive fan of English football, and an avid supporter of Arsenal Football Club; I really think we're gonna win it this season. I also like photography because I find it cool to freeze those perfect moments and nice sceneries with my camera. All in all, I'm all about adventure, always looking for new experiences and challenges that make life more exciting.
 
 ## Experience
-* **Praetorian Aeronautics (2025 - current)**
-    - Yet to start
 <p></p>
 * **Jamii Telecommunications Limited (Jun 2024-Aug 2024)**
     - Optimized GSM and LTE networks, improving KPIs such as Mobility, Accessibility, Retainability, and Service Integrity, resulting in an enhancement in overall network QoS and User Experience (UX)
