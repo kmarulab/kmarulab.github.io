@@ -50,6 +50,8 @@ BSc Engineering BA Mathematics - Swarthmore College '26
 : Applied grayscale conversion, Sobel operators in x and y directions for accurate gradient-based edge extraction
 : Enhanced edge clarity with adaptive thresholding, creating binary edge maps for improved visibility and usability
 
+**Github**
+: I have completed more projects posted on my github. They include an FM Radio, ECG Heart rate monitor, regular ray tracer among many others. Feel free to check them out.
 
 ## Shout-out
 Huge thanks to [Oskar Wickström](https://x.com/owickstrom) for their [article](https://owickstrom.github.io/the-monospace-web/) and template of which this website is built from. Many thanks to [Ryan Ward](https://x.com/crank1_) from whom I first found out about this template on X.
