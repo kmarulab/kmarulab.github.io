@@ -50,7 +50,8 @@ that cuDNN works. I will highlight what it does and the key snippets</p>
 <code>cudnnCreate</code>. This handle is essential as it acts as the
 main context for all cuDNN operations. The <code>checkCUDNN</code> macro
 ensures we handle any errors during initialization.</p>
-<pre><code>cudnnHandle_t cudnn;checkCUDNN(cudnnCreate(&amp;cudnn));</code></pre>
+<pre><code>cudnnHandle_t cudnn;
+  checkCUDNN(cudnnCreate(&amp;cudnn));</code></pre>
 <ol start="2" type="1">
 <li><strong>Setting Up Tensor Descriptors</strong></li>
 </ol>
@@ -59,13 +60,22 @@ step, we create a descriptor for the input data (a 5x5 image with a
 batch size of 1 and 1 channel) and define its format using
 <code>cudnnSetTensor4dDescriptor</code>. The descriptor tells cuDNN how
 to interpret the input data, including its dimensions and layout.</p>
-<pre><code>int batch_size = 1, channels = 1, height = 5, width = 5;cudnnTensorDescriptor_t input_descriptor;checkCUDNN(cudnnCreateTensorDescriptor(&amp;input_descriptor));checkCUDNN(cudnnSetTensor4dDescriptor(    input_descriptor, CUDNN_TENSOR_NHWC, CUDNN_DATA_FLOAT,    batch_size, channels, height, width));cudnnTensorDescriptor_t output_descriptor;int output_height = 3, output_width = 3; checkCUDNN(cudnnCreateTensorDescriptor(&amp;output_descriptor));checkCUDNN(cudnnSetTensor4dDescriptor(    output_descriptor, CUDNN_TENSOR_NHWC, CUDNN_DATA_FLOAT,    batch_size, channels, output_height, output_width));</code></pre>
+<pre><code>
+  int batch_size = 1, channels = 1, height = 5, width = 5;
+  cudnnTensorDescriptor_t input_descriptor;
+  checkCUDNN(cudnnCreateTensorDescriptor(&amp;input_descriptor));
+  checkCUDNN(cudnnSetTensor4dDescriptor(input_descriptor, CUDNN_TENSOR_NHWC, CUDNN_DATA_FLOAT,batch_size, channels, height, width));
+  cudnnTensorDescriptor_t output_descriptor;int output_height = 3, output_width = 3;
+  checkCUDNN(cudnnCreateTensorDescriptor(&amp;output_descriptor));
+  checkCUDNN(cudnnSetTensor4dDescriptor(output_descriptor, CUDNN_TENSOR_NHWC, CUDNN_DATA_FLOAT,batch_size, channels, output_height, output_width));</code></pre>
 <p>3. <strong>Creating the Convolution Layer</strong></p>
 <p>This snippet sets up the convolution filter. In this case, we use a
 3x3 filter with one input and output channel.
 <code>cudnnSetFilter4dDescriptor</code> defines the filter’s dimensions
 and data type.</p>
-<pre><code>cudnnFilterDescriptor_t filter_descriptor;checkCUDNN(cudnnCreateFilterDescriptor(&amp;filter_descriptor));checkCUDNN(cudnnSetFilter4dDescriptor(filter_descriptor, CUDNN_DATA_FLOAT, CUDNN_TENSOR_NHWC, channels, channels, 3, 3));</code></pre>
+<pre><code>cudnnFilterDescriptor_t filter_descriptor;
+  checkCUDNN(cudnnCreateFilterDescriptor(&amp;filter_descriptor));
+  checkCUDNN(cudnnSetFilter4dDescriptor(filter_descriptor, CUDNN_DATA_FLOAT, CUDNN_TENSOR_NHWC, channels, channels, 3, 3));</code></pre>
 <p>4. <strong>Defining the Convolution Operation</strong></p>
 <p>The <code>cudnnCreateConvolutionDescriptor</code> function defines
 the convolution operation’s parameters. We specify <strong>valid
@@ -73,14 +83,18 @@ padding</strong> (0 padding), a <strong>stride of 1</strong>, and a
 <strong>dilation factor of 1</strong>. Additionally, we set
 <code>CUDNN_CROSS_CORRELATION</code>, which is commonly used for
 convolution operations.</p>
-<pre><code>cudnnConvolutionDescriptor_t convolution_descriptor;checkCUDNN(cudnnCreateConvolutionDescriptor(&amp;convolution_descriptor));checkCUDNN(cudnnSetConvolution2dDescriptor(convolution_descriptor, 0, 0, 1, 1, 1, 1, CUDNN_CROSS_CORRELATION, CUDNN_DATA_FLOAT));</code></pre>
+<pre><code>cudnnConvolutionDescriptor_t convolution_descriptor;
+  checkCUDNN(cudnnCreateConvolutionDescriptor(&amp;convolution_descriptor));
+  checkCUDNN(cudnnSetConvolution2dDescriptor(convolution_descriptor, 0, 0, 1, 1, 1, 1, CUDNN_CROSS_CORRELATION, CUDNN_DATA_FLOAT));</code></pre>
 <p>5. <strong>Memory Allocation for Input, Filter, and
 Output</strong></p>
 <p>Before we can run the convolution, we need to allocate memory on the
 GPU for the input data, filter weights, and output data. Here, we use
 <code>cudaMalloc</code> to allocate space on the GPU, with sizes
 calculated based on the input dimensions and filter size.</p>
-<pre><code>cudaMalloc(&amp;d_input, input_size);cudaMalloc(&amp;d_filter, filter_size);cudaMalloc(&amp;d_output, output_size);</code></pre>
+<pre><code>cudaMalloc(&amp;d_input, input_size);
+  cudaMalloc(&amp;d_filter, filter_size);
+  cudaMalloc(&amp;d_output, output_size);</code></pre>
 <p>6. <strong>Forward Convolution Pass</strong></p>
 <p>This is the core of the program — the forward pass of the convolution
 operation. The function <code>cudnnConvolutionForward</code> applies the
@@ -102,7 +116,15 @@ model to learn from the data.</p>
 allocated GPU memory and destroy cuDNN descriptors and the cuDNN handle.
 This ensures that resources are freed, preventing memory leaks and
 ensuring optimal performance for future operations.</p>
-<pre><code>cudaFree(d_input);cudaFree(d_filter);cudaFree(d_output);cudaFree(d_grad_filter);cudnnDestroyTensorDescriptor(input_descriptor);cudnnDestroyTensorDescriptor(output_descriptor);cudnnDestroyFilterDescriptor(filter_descriptor);cudnnDestroyConvolutionDescriptor(convolution_descriptor);cudnnDestroy(cudnn);</code></pre>
+<pre><code>cudaFree(d_input);
+  cudaFree(d_filter);
+  cudaFree(d_output);
+  cudaFree(d_grad_filter);
+  cudnnDestroyTensorDescriptor(input_descriptor);
+  cudnnDestroyTensorDescriptor(output_descriptor);
+  cudnnDestroyFilterDescriptor(filter_descriptor);
+  cudnnDestroyConvolutionDescriptor(convolution_descriptor);
+  cudnnDestroy(cudnn);</code></pre>
 <h2 id="running-the-code">Running the Code</h2>
 <p>Assuming you have CUDA and cuDNN installed correctly, proceed to:</p>
 <p><strong>Create and Compile the Code:</strong> Save the code into a
@@ -117,7 +139,10 @@ run it on your system using:</p>
 the convolution operation being performed, along with any errors or
 success messages.</p>
 <p><strong>Expected Output:</strong></p>
-<pre><code>cuDNN initialization successful.Forward pass completed.Backward pass completed.Memory cleanup successful.</code></pre>
+<pre><code>cuDNN initialization successful.
+  Forward pass completed.
+  Backward pass completed.
+  Memory cleanup successful.</code></pre>
 <h2 id="conclusion">Conclusion</h2>
 <p>This simple example showcases the fundamental steps involved in
 training a convolutional neural network layer using cuDNN. Although it
