@@ -1,0 +1,37 @@
+{%- if site.tags != "" -%}
+  {% include collecttags.html -%}
+{%- endif -%}
+
+<meta charset="utf-8" />
+<meta content='text/html; charset=utf-8' http-equiv='Content-Type' />
+<meta http-equiv='X-UA-Compatible' content='IE=edge' />
+<meta http-equiv="Permissions-Policy" content="interest-cohort=()"/>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
+<meta name="robots" content="index, follow" />
+{%- assign sorttags = page.tags | remove: "[" | remove: "]" | remove: '"' | replace: ', ', ' '| uniq | sort | compact %}
+<meta name="keywords" content="{{ sorttags }}" />
+<meta name="mastodon:site" content="{{ site.links.social }}" />
+<meta name="social:site" content="{{ site.links.social }}" />
+<meta name="google-site-verification" content="AQsWi26iUacMwox0Ft3U1bz1XwDxxbuCP4KwHmYh930" />
+
+{%if page.url == "/" %}
+{% else %}
+<script type="application/ld+json">
+  [{
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "{{ site.title }}",
+        "item": "{{ site.url }}"
+      },{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "{{ page.title }}"
+      }]
+    }]
+</script>
+{% endif %}
+
+{% seo %}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🤖</text></svg>">
+<link rel="stylesheet" href="/assets/css/terminal-0.7.1.min.css" />
+<link rel="stylesheet" href="/assets/css/animate-3.7.2.min.css" />
+<link rel="stylesheet" href="/assets/css/console.css" />
+
+{%- include meta.html -%}
+</head>
+
+<body class="terminal">
+  <div class="container">
+    <div class="terminal-nav">
+      <header class="terminal-logo">
+        <div class="logo terminal-prompt">
+          {%if page.url == "/" %}
+            {% assign breadcrumb = "~" %}
+          {%elsif page.url == "/about/" %}
+            {% assign breadcrumb = "/about" %}
+          {%elsif page.url == "/contact/" %}
+            {% assign breadcrumb = "/contact" %}
+          {% else %}
+            {% assign breadcrumb = "/blog" %}
+          {% endif %}
+          <font color="#b58900">kimaru</font>@boruett:<font color="#2aa198">{{breadcrumb}} </font>🤖<font color="dc322f">➜</font>
+        </div>
+      </header>
+      <nav class="terminal-menu">
+       <ul>
+         <li><a href="/">Home/</a></li>
+         <li><a href="/blog/">Blog/</a></li>
+         <li><a href="/about/">About/</a></li>
+         <li><a href="/contact/">Contact/</a></li>
+       </ul>
+      </nav>
+    </div>
+  </div>
+  <div class="container">
+    {{ content }}
+    <div class="footer">
+      &copy; {{ site.time | date: '%Y' }} {{ site.author.name }} [<a href="mailto:{{ site.links.email }}">Email</a>|<a rel="me" href="{{ site.links.twitter }}">Twitter/X</a>|<a href="https://www.github.com/{{ site.links.github }}">GitHub</a>]
+    </div>
+  </div>
+</body>
+</html>
