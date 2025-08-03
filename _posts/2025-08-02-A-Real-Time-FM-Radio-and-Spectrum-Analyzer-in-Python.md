@@ -170,7 +170,7 @@ start_play.wait()
 print("Audio start …")
 ```
 
-### 2\.The Producer-Consumer Model for Audio
+### 2\. The Producer-Consumer Model for Audio
 
 To prevent audio glitches, the script implements a classic producer-consumer model.
 
