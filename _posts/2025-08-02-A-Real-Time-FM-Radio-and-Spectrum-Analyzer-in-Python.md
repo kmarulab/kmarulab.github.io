@@ -35,7 +35,7 @@ Ever wondered how you can turn your computer and a simple Software-Defined Radio
 
 <!-- Overall caption -->
 <p style="text-align:center; font-style:italic; margin-top:0.5rem;">
-  Figure&nbsp;1 – LimeSDR Mini v2.0: bare board vs. cooled.
+  LimeSDR Mini v2.0: bare board vs. cooled.
 </p>
 
 The board kept overheating, so I ended up getting it a cooling fan.
