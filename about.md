@@ -32,5 +32,7 @@ Kimaru is an electrical engineering student in his senior year passionate about 
 - Boards: STM32, ESP32, PYNQ Z2, Jetson Nano, LicheeRV Nano
 - Test equipment: Oscilloscopes, Spectrum Analysers, Function Generators
 - Protocols: SPI, I2C, UART, GPIB, USB
-- Math Coursework: Real Analysis, Ordinary and Partial Differential Equations, Stochastic Processes and Numerical Methods, Calculus I/II/II, Linear Algebra
-- Engineering Coursework: Nonlinear Dynamics and Chaos, Digital Signal Processing, Mobile Robotics, Embedded Systems, Thermofluid Mechanics, Mechanics, Linear Systems Analysis, Electrical Circuits Analysis, Electromagnetic Field Theory, Physical Electronics, Microelectronics, Experimentation for Engineering Design
+
+## Relevant Coursework
+- Mathematics: Real Analysis I, Ordinary and Partial Differential Equations, Stochastic Processes and Numerical Methods, Calculus I/II/II, Linear Algebra
+- Engineering: Nonlinear Dynamics and Chaos, Digital Signal Processing, Mobile Robotics, Embedded Systems, Thermofluid Mechanics, Mechanics, Linear Systems Analysis, Electrical Circuits Analysis, Electromagnetic Field Theory, Physical Electronics, Microelectronics, Experimentation for Engineering Design
