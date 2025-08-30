@@ -34,5 +34,5 @@ Kimaru is an electrical engineering student in his senior year passionate about 
 - Protocols: SPI, I2C, UART, GPIB, USB
 
 ## Relevant Coursework
-- Mathematics: Real Analysis I, Ordinary and Partial Differential Equations, Stochastic Processes and Numerical Methods, Calculus I/II/II, Linear Algebra
-- Engineering: Nonlinear Dynamics and Chaos, Digital Signal Processing, Mobile Robotics, Embedded Systems, Thermofluid Mechanics, Mechanics, Linear Systems Analysis, Electrical Circuits Analysis, Electromagnetic Field Theory, Physical Electronics, Microelectronics, Experimentation for Engineering Design
+- Mathematics: Real Analysis I, Ordinary and Partial Differential Equations, Stochastic Processes and Numerical Methods, Calculus I/II/II, Linear Algebra, Discrete Mathematics
+- Engineering: Nonlinear Dynamics and Chaos, Digital Signal Processing, Mobile Robotics, Embedded Systems, Thermofluid Mechanics, Mechanics, Linear Systems Analysis, Electrical Circuits Analysis, Electromagnetic Field Theory, Physical Electronics, Microelectronics, Experimentation for Engineering Design, Data Structures and Algorithms
