@@ -1,6 +1,0 @@
-Flask
-Flask-SocketIO
-pandas
-pyserial
-pyngrok
-requests

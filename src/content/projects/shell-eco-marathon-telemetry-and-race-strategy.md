@@ -17,11 +17,9 @@ This project integrates live monitoring and predictive strategy for Swarthmore's
 ## Documentation
 
 - Blog write-up: [Building a Telemetry and Predictive Race Strategy System](/posts/shell-eco-marathon-telemetry-system)
-- Draft report: [e90-draft-report.pdf](/resources/capstone/e90-draft-report.pdf)
-- Final presentation: [e90-final-presentation.pptx](/resources/capstone/e90-final-presentation.pptx)
+- Final report: [E90_Final_Report.pdf](/resources/capstone/E90_Final_Report.pdf)
+- Final presentation: [E90_Final_Presentation.pdf](/resources/capstone/E90_Final_Presentation.pdf)
 - Race strategy simulator: [open static simulator](/resources/capstone/race-strategy-simulator/index.html)
-- Race strategy report files: [report folder](/resources/capstone/race-strategy-report/)
-- Telemetry dashboard files: [dashboard docs folder](/resources/capstone/telemetry-dashboard-docs/)
 
 ## Selected figures
 
