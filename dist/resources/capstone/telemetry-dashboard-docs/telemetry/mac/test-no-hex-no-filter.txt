@@ -1,0 +1,432 @@
+17/02/2026@20:21:44.033::Packet[00000544l]<<Serial [1] [/dev/tty.usbserial-A9OAID1K] Received 8 bytes.
+00|20|8A|00|1F|00|01|81|  |  |  |  |  |  |  |   || N   N N N N N N
+
+17/02/2026@20:21:44.529::Packet[00000545l]<<Serial [1] [/dev/tty.usbserial-A9OAID1K] Received 8 bytes.
+00|1F|8A|00|21|00|01|81|  |  |  |  |  |  |  |   || N N N N ! N N N
+
+17/02/2026@20:21:45.025::Packet[00000546l]<<Serial [1] [/dev/tty.usbserial-A9OAID1K] Received 8 bytes.
+00|20|8A|00|22|00|01|81|  |  |  |  |  |  |  |   || N   N N " N N N
+
+17/02/2026@20:21:45.537::Packet[00000547l]<<Serial [1] [/dev/tty.usbserial-A9OAID1K] Received 8 bytes.
+00|20|8A|00|23|00|01|81|  |  |  |  |  |  |  |   || N   N N # N N N
+
+17/02/2026@20:21:46.033::Packet[00000548l]<<Serial [1] [/dev/tty.usbserial-A9OAID1K] Received 8 bytes.
+00|20|8A|00|24|00|01|81|  |  |  |  |  |  |  |   || N   N N $ N N N
+
+17/02/2026@20:21:46.529::Packet[00000549l]<<Serial [1] [/dev/tty.usbserial-A9OAID1K] Received 8 bytes.
+00|20|8A|00|22|00|01|81|  |  |  |  |  |  |  |   || N   N N " N N N
+
+17/02/2026@20:21:47.025::Packet[00000550l]<<Serial [1] [/dev/tty.usbserial-A9OAID1K] Received 8 bytes.
+00|20|8A|00|23|00|01|81|  |  |  |  |  |  |  |   || N   N N # N N N
+
+17/02/2026@20:21:47.537::Packet[00000551l]<<Serial [1] [/dev/tty.usbserial-A9OAID1K] Received 8 bytes.
+00|20|8A|00|23|00|01|81|  |  |  |  |  |  |  |   || N   N N # N N N
+
+17/02/2026@20:21:48.033::Packet[00000552l]<<Serial [1] [/dev/tty.usbserial-A9OAID1K] Received 8 bytes.
+00|20|8A|00|26|00|01|81|  |  |  |  |  |  |  |   || N   N N & N N N
+
+17/02/2026@20:21:48.529::Packet[00000553l]<<Serial [1] [/dev/tty.usbserial-A9OAID1K] Received 8 bytes.
+00|20|8A|00|23|00|01|81|  |  |  |  |  |  |  |   || N   N N # N N N
+
+17/02/2026@20:21:49.057::Packet[00000554l]<<Serial [1] [/dev/tty.usbserial-A9OAID1K] Received 8 bytes.
+00|20|8A|00|23|00|01|81|  |  |  |  |  |  |  |   || N   N N # N N N
+
+17/02/2026@20:21:49.569::Packet[00000555l]<<Serial [1] [/dev/tty.usbserial-A9OAID1K] Received 8 bytes.
+00|20|8A|00|23|00|01|81|  |  |  |  |  |  |  |   || N   N N # N N N
+
+17/02/2026@20:21:50.065::Packet[00000556l]<<Serial [1] [/dev/tty.usbserial-A9OAID1K] Received 8 bytes.
+00|20|8A|00|25|00|01|81|  |  |  |  |  |  |  |   || N   N N % N N N
+
+17/02/2026@20:21:50.561::Packet[00000557l]<<Serial [1] [/dev/tty.usbserial-A9OAID1K] Received 8 bytes.
+00|20|8A|00|1C|00|01|81|  |  |  |  |  |  |  |   || N   N N N N N N
+
+17/02/2026@20:21:51.057::Packet[00000558l]<<Serial [1] [/dev/tty.usbserial-A9OAID1K] Received 8 bytes.
+00|20|8A|00|22|00|01|81|  |  |  |  |  |  |  |   || N   N N " N N N
+
+17/02/2026@20:21:51.569::Packet[00000559l]<<Serial [1] [/dev/tty.usbserial-A9OAID1K] Received 7 bytes.
+00|20|31|22|00|01|81|  |  |  |  |  |  |  |  |   || N   1 " N N N
+
+17/02/2026@20:21:52.065::Packet[00000560l]<<Serial [1] [/dev/tty.usbserial-A9OAID1K] Received 8 bytes.
+00|20|8A|00|23|00|01|81|  |  |  |  |  |  |  |   || N   N N # N N N
+
+17/02/2026@20:21:52.561::Packet[00000561l]<<Serial [1] [/dev/tty.usbserial-A9OAID1K] Received 8 bytes.
+00|20|8A|00|22|00|01|81|  |  |  |  |  |  |  |   || N   N N " N N N
+
+17/02/2026@20:21:53.073::Packet[00000562l]<<Serial [1] [/dev/tty.usbserial-A9OAID1K] Received 7 bytes.
+00|20|31|22|00|01|81|  |  |  |  |  |  |  |  |   || N   1 " N N N
+
+17/02/2026@20:21:53.569::Packet[00000563l]<<Serial [1] [/dev/tty.usbserial-A9OAID1K] Received 8 bytes.
+00|20|8A|00|23|00|01|81|  |  |  |  |  |  |  |   || N   N N # N N N
+
+17/02/2026@20:21:54.065::Packet[00000564l]<<Serial [1] [/dev/tty.usbserial-A9OAID1K] Received 8 bytes.
+00|20|8A|00|22|00|01|81|  |  |  |  |  |  |  |   || N   N N " N N N
+
+17/02/2026@20:21:54.561::Packet[00000565l]<<Serial [1] [/dev/tty.usbserial-A9OAID1K] Received 8 bytes.
+00|20|8A|00|28|00|01|81|  |  |  |  |  |  |  |   || N   N N ( N N N
+
+17/02/2026@20:21:55.073::Packet[00000566l]<<Serial [1] [/dev/tty.usbserial-A9OAID1K] Received 8 bytes.
+00|20|8A|00|22|00|01|81|  |  |  |  |  |  |  |   || N   N N " N N N
+
+17/02/2026@20:21:55.569::Packet[00000567l]<<Serial [1] [/dev/tty.usbserial-A9OAID1K] Received 8 bytes.
+00|20|8A|00|25|00|01|81|  |  |  |  |  |  |  |   || N   N N % N N N
+
+17/02/2026@20:21:56.065::Packet[00000568l]<<Serial [1] [/dev/tty.usbserial-A9OAID1K] Received 8 bytes.
+00|20|8A|00|24|00|01|81|  |  |  |  |  |  |  |   || N   N N $ N N N
+
+17/02/2026@20:21:56.577::Packet[00000569l]<<Serial [1] [/dev/tty.usbserial-A9OAID1K] Received 8 bytes.
+00|20|8A|00|22|00|01|81|  |  |  |  |  |  |  |   || N   N N " N N N
+
+17/02/2026@20:21:57.073::Packet[00000570l]<<Serial [1] [/dev/tty.usbserial-A9OAID1K] Received 8 bytes.
+00|20|8A|00|22|00|01|81|  |  |  |  |  |  |  |   || N   N N " N N N
+
+17/02/2026@20:21:57.569::Packet[00000571l]<<Serial [1] [/dev/tty.usbserial-A9OAID1K] Received 8 bytes.
+00|20|8A|00|20|00|01|81|  |  |  |  |  |  |  |   || N   N N   N N N
+
+17/02/2026@20:21:58.065::Packet[00000572l]<<Serial [1] [/dev/tty.usbserial-A9OAID1K] Received 8 bytes.
+00|20|8A|00|25|00|01|81|  |  |  |  |  |  |  |   || N   N N % N N N
+
+17/02/2026@20:21:58.577::Packet[00000573l]<<Serial [1] [/dev/tty.usbserial-A9OAID1K] Received 8 bytes.
+00|20|8A|00|22|00|01|81|  |  |  |  |  |  |  |   || N   N N " N N N
+
+17/02/2026@20:21:59.073::Packet[00000574l]<<Serial [1] [/dev/tty.usbserial-A9OAID1K] Received 8 bytes.
+00|20|8A|00|22|00|01|81|  |  |  |  |  |  |  |   || N   N N " N N N
+
+17/02/2026@20:21:59.569::Packet[00000575l]<<Serial [1] [/dev/tty.usbserial-A9OAID1K] Received 8 bytes.
+00|20|8A|00|26|00|01|81|  |  |  |  |  |  |  |   || N   N N & N N N
+
+17/02/2026@20:22:00.081::Packet[00000576l]<<Serial [1] [/dev/tty.usbserial-A9OAID1K] Received 8 bytes.
+00|20|8A|00|23|00|01|81|  |  |  |  |  |  |  |   || N   N N # N N N
+
+17/02/2026@20:22:00.577::Packet[00000577l]<<Serial [1] [/dev/tty.usbserial-A9OAID1K] Received 8 bytes.
+00|20|8A|00|23|00|01|81|  |  |  |  |  |  |  |   || N   N N # N N N
+
+17/02/2026@20:22:01.073::Packet[00000578l]<<Serial [1] [/dev/tty.usbserial-A9OAID1K] Received 8 bytes.
+00|20|8A|00|22|00|01|81|  |  |  |  |  |  |  |   || N   N N " N N N
+
+17/02/2026@20:22:01.569::Packet[00000579l]<<Serial [1] [/dev/tty.usbserial-A9OAID1K] Received 8 bytes.
+00|20|8A|00|23|00|01|81|  |  |  |  |  |  |  |   || N   N N # N N N
+
+17/02/2026@20:22:02.081::Packet[00000580l]<<Serial [1] [/dev/tty.usbserial-A9OAID1K] Received 7 bytes.
+00|20|11|23|00|01|81|  |  |  |  |  |  |  |  |   || N   N # N N N
+
+17/02/2026@20:22:02.577::Packet[00000581l]<<Serial [1] [/dev/tty.usbserial-A9OAID1K] Received 8 bytes.
+00|20|8A|00|22|00|01|81|  |  |  |  |  |  |  |   || N   N N " N N N
+
+17/02/2026@20:22:03.073::Packet[00000582l]<<Serial [1] [/dev/tty.usbserial-A9OAID1K] Received 8 bytes.
+00|20|8A|00|23|00|01|81|  |  |  |  |  |  |  |   || N   N N # N N N
+
+17/02/2026@20:22:03.585::Packet[00000583l]<<Serial [1] [/dev/tty.usbserial-A9OAID1K] Received 8 bytes.
+00|20|8A|00|26|00|01|81|  |  |  |  |  |  |  |   || N   N N & N N N
+
+17/02/2026@20:22:04.081::Packet[00000584l]<<Serial [1] [/dev/tty.usbserial-A9OAID1K] Received 8 bytes.
+00|20|8A|00|22|00|01|81|  |  |  |  |  |  |  |   || N   N N " N N N
+
+17/02/2026@20:22:04.577::Packet[00000585l]<<Serial [1] [/dev/tty.usbserial-A9OAID1K] Received 8 bytes.
+00|20|8A|00|22|00|01|81|  |  |  |  |  |  |  |   || N   N N " N N N
+
+17/02/2026@20:22:05.073::Packet[00000586l]<<Serial [1] [/dev/tty.usbserial-A9OAID1K] Received 8 bytes.
+00|20|8A|00|23|00|01|81|  |  |  |  |  |  |  |   || N   N N # N N N
+
+17/02/2026@20:22:05.585::Packet[00000587l]<<Serial [1] [/dev/tty.usbserial-A9OAID1K] Received 8 bytes.
+00|20|8A|00|25|00|01|81|  |  |  |  |  |  |  |   || N   N N % N N N
+
+17/02/2026@20:22:06.081::Packet[00000588l]<<Serial [1] [/dev/tty.usbserial-A9OAID1K] Received 8 bytes.
+00|20|8A|00|24|00|01|81|  |  |  |  |  |  |  |   || N   N N $ N N N
+
+17/02/2026@20:22:06.577::Packet[00000589l]<<Serial [1] [/dev/tty.usbserial-A9OAID1K] Received 8 bytes.
+00|20|8A|00|23|00|01|81|  |  |  |  |  |  |  |   || N   N N # N N N
+
+17/02/2026@20:22:07.089::Packet[00000590l]<<Serial [1] [/dev/tty.usbserial-A9OAID1K] Received 7 bytes.
+00|20|31|23|00|01|81|  |  |  |  |  |  |  |  |   || N   1 # N N N
+
+17/02/2026@20:22:07.585::Packet[00000591l]<<Serial [1] [/dev/tty.usbserial-A9OAID1K] Received 8 bytes.
+00|20|8A|00|23|00|01|81|  |  |  |  |  |  |  |   || N   N N # N N N
+
+17/02/2026@20:22:08.081::Packet[00000592l]<<Serial [1] [/dev/tty.usbserial-A9OAID1K] Received 8 bytes.
+00|20|8A|00|21|00|01|81|  |  |  |  |  |  |  |   || N   N N ! N N N
+
+17/02/2026@20:22:08.577::Packet[00000593l]<<Serial [1] [/dev/tty.usbserial-A9OAID1K] Received 8 bytes.
+00|20|8A|00|2D|00|01|81|  |  |  |  |  |  |  |   || N   N N - N N N
+
+17/02/2026@20:22:09.089::Packet[00000594l]<<Serial [1] [/dev/tty.usbserial-A9OAID1K] Received 8 bytes.
+00|20|8A|00|22|00|01|81|  |  |  |  |  |  |  |   || N   N N " N N N
+
+17/02/2026@20:22:09.585::Packet[00000595l]<<Serial [1] [/dev/tty.usbserial-A9OAID1K] Received 8 bytes.
+00|20|8A|00|24|00|01|81|  |  |  |  |  |  |  |   || N   N N $ N N N
+
+17/02/2026@20:22:10.081::Packet[00000596l]<<Serial [1] [/dev/tty.usbserial-A9OAID1K] Received 8 bytes.
+00|20|8A|00|23|00|01|81|  |  |  |  |  |  |  |   || N   N N # N N N
+
+17/02/2026@20:22:10.593::Packet[00000597l]<<Serial [1] [/dev/tty.usbserial-A9OAID1K] Received 8 bytes.
+00|20|8A|00|23|00|01|81|  |  |  |  |  |  |  |   || N   N N # N N N
+
+17/02/2026@20:22:11.089::Packet[00000598l]<<Serial [1] [/dev/tty.usbserial-A9OAID1K] Received 8 bytes.
+00|20|8A|00|1C|00|01|81|  |  |  |  |  |  |  |   || N   N N N N N N
+
+17/02/2026@20:22:11.585::Packet[00000599l]<<Serial [1] [/dev/tty.usbserial-A9OAID1K] Received 8 bytes.
+00|20|8A|00|1B|00|01|81|  |  |  |  |  |  |  |   || N   N N N N N N
+
+17/02/2026@20:22:12.097::Packet[00000600l]<<Serial [1] [/dev/tty.usbserial-A9OAID1K] Received 8 bytes.
+00|20|8A|00|22|00|01|81|  |  |  |  |  |  |  |   || N   N N " N N N
+
+17/02/2026@20:22:12.593::Packet[00000601l]<<Serial [1] [/dev/tty.usbserial-A9OAID1K] Received 8 bytes.
+00|20|8A|00|22|00|01|81|  |  |  |  |  |  |  |   || N   N N " N N N
+
+17/02/2026@20:22:13.089::Packet[00000602l]<<Serial [1] [/dev/tty.usbserial-A9OAID1K] Received 8 bytes.
+00|20|8A|00|23|00|01|81|  |  |  |  |  |  |  |   || N   N N # N N N
+
+17/02/2026@20:22:13.585::Packet[00000603l]<<Serial [1] [/dev/tty.usbserial-A9OAID1K] Received 8 bytes.
+00|20|8A|00|22|00|01|81|  |  |  |  |  |  |  |   || N   N N " N N N
+
+17/02/2026@20:22:14.097::Packet[00000604l]<<Serial [1] [/dev/tty.usbserial-A9OAID1K] Received 8 bytes.
+00|20|8A|00|20|00|01|81|  |  |  |  |  |  |  |   || N   N N   N N N
+
+17/02/2026@20:22:14.609::Packet[00000605l]<<Serial [1] [/dev/tty.usbserial-A9OAID1K] Received 8 bytes.
+00|20|8A|00|21|00|01|81|  |  |  |  |  |  |  |   || N   N N ! N N N
+
+17/02/2026@20:22:15.105::Packet[00000606l]<<Serial [1] [/dev/tty.usbserial-A9OAID1K] Received 8 bytes.
+00|20|8A|00|23|00|01|81|  |  |  |  |  |  |  |   || N   N N # N N N
+
+17/02/2026@20:22:15.601::Packet[00000607l]<<Serial [1] [/dev/tty.usbserial-A9OAID1K] Received 8 bytes.
+00|20|8A|00|21|00|01|81|  |  |  |  |  |  |  |   || N   N N ! N N N
+
+17/02/2026@20:22:16.097::Packet[00000608l]<<Serial [1] [/dev/tty.usbserial-A9OAID1K] Received 8 bytes.
+00|20|8A|00|21|00|01|81|  |  |  |  |  |  |  |   || N   N N ! N N N
+
+17/02/2026@20:22:16.609::Packet[00000609l]<<Serial [1] [/dev/tty.usbserial-A9OAID1K] Received 8 bytes.
+00|20|8A|00|23|00|01|81|  |  |  |  |  |  |  |   || N   N N # N N N
+
+17/02/2026@20:22:17.105::Packet[00000610l]<<Serial [1] [/dev/tty.usbserial-A9OAID1K] Received 8 bytes.
+00|20|8A|00|23|00|01|81|  |  |  |  |  |  |  |   || N   N N # N N N
+
+17/02/2026@20:22:17.601::Packet[00000611l]<<Serial [1] [/dev/tty.usbserial-A9OAID1K] Received 8 bytes.
+00|20|8A|00|22|00|01|81|  |  |  |  |  |  |  |   || N   N N " N N N
+
+17/02/2026@20:22:18.113::Packet[00000612l]<<Serial [1] [/dev/tty.usbserial-A9OAID1K] Received 8 bytes.
+00|1F|8A|00|25|00|01|81|  |  |  |  |  |  |  |   || N N N N % N N N
+
+17/02/2026@20:22:18.609::Packet[00000613l]<<Serial [1] [/dev/tty.usbserial-A9OAID1K] Received 8 bytes.
+00|20|8A|00|1F|00|01|81|  |  |  |  |  |  |  |   || N   N N N N N N
+
+17/02/2026@20:22:19.105::Packet[00000614l]<<Serial [1] [/dev/tty.usbserial-A9OAID1K] Received 8 bytes.
+00|20|8A|00|23|00|01|81|  |  |  |  |  |  |  |   || N   N N # N N N
+
+17/02/2026@20:22:19.601::Packet[00000615l]<<Serial [1] [/dev/tty.usbserial-A9OAID1K] Received 8 bytes.
+00|1F|8A|00|22|00|01|81|  |  |  |  |  |  |  |   || N N N N " N N N
+
+17/02/2026@20:22:20.113::Packet[00000616l]<<Serial [1] [/dev/tty.usbserial-A9OAID1K] Received 8 bytes.
+00|20|8A|00|25|00|01|81|  |  |  |  |  |  |  |   || N   N N % N N N
+
+17/02/2026@20:22:20.609::Packet[00000617l]<<Serial [1] [/dev/tty.usbserial-A9OAID1K] Received 8 bytes.
+00|1F|8A|00|1F|00|01|81|  |  |  |  |  |  |  |   || N N N N N N N N
+
+17/02/2026@20:22:21.105::Packet[00000618l]<<Serial [1] [/dev/tty.usbserial-A9OAID1K] Received 8 bytes.
+00|20|8A|00|22|00|01|81|  |  |  |  |  |  |  |   || N   N N " N N N
+
+17/02/2026@20:22:21.617::Packet[00000619l]<<Serial [1] [/dev/tty.usbserial-A9OAID1K] Received 8 bytes.
+00|20|8A|00|19|00|01|81|  |  |  |  |  |  |  |   || N   N N N N N N
+
+17/02/2026@20:22:22.113::Packet[00000620l]<<Serial [1] [/dev/tty.usbserial-A9OAID1K] Received 8 bytes.
+00|20|8A|00|1A|00|01|81|  |  |  |  |  |  |  |   || N   N N N N N N
+
+17/02/2026@20:22:22.609::Packet[00000621l]<<Serial [1] [/dev/tty.usbserial-A9OAID1K] Received 8 bytes.
+00|20|8A|00|22|00|01|81|  |  |  |  |  |  |  |   || N   N N " N N N
+
+17/02/2026@20:22:23.105::Packet[00000622l]<<Serial [1] [/dev/tty.usbserial-A9OAID1K] Received 8 bytes.
+00|20|8A|00|1F|00|01|81|  |  |  |  |  |  |  |   || N   N N N N N N
+
+17/02/2026@20:22:23.617::Packet[00000623l]<<Serial [1] [/dev/tty.usbserial-A9OAID1K] Received 8 bytes.
+00|20|8A|00|21|00|01|81|  |  |  |  |  |  |  |   || N   N N ! N N N
+
+17/02/2026@20:22:24.113::Packet[00000624l]<<Serial [1] [/dev/tty.usbserial-A9OAID1K] Received 7 bytes.
+00|20|31|23|00|01|81|  |  |  |  |  |  |  |  |   || N   1 # N N N
+
+17/02/2026@20:22:24.609::Packet[00000625l]<<Serial [1] [/dev/tty.usbserial-A9OAID1K] Received 7 bytes.
+00|20|8A|00|24|01|81|  |  |  |  |  |  |  |  |   || N   N N $ N N
+
+17/02/2026@20:22:25.121::Packet[00000626l]<<Serial [1] [/dev/tty.usbserial-A9OAID1K] Received 8 bytes.
+00|20|8A|00|21|00|01|81|  |  |  |  |  |  |  |   || N   N N ! N N N
+
+17/02/2026@20:22:25.617::Packet[00000627l]<<Serial [1] [/dev/tty.usbserial-A9OAID1K] Received 8 bytes.
+00|20|8A|00|22|00|01|81|  |  |  |  |  |  |  |   || N   N N " N N N
+
+17/02/2026@20:22:26.113::Packet[00000628l]<<Serial [1] [/dev/tty.usbserial-A9OAID1K] Received 8 bytes.
+00|20|8A|00|27|00|01|81|  |  |  |  |  |  |  |   || N   N N ' N N N
+
+17/02/2026@20:22:26.625::Packet[00000629l]<<Serial [1] [/dev/tty.usbserial-A9OAID1K] Received 8 bytes.
+00|20|8A|00|23|00|01|81|  |  |  |  |  |  |  |   || N   N N # N N N
+
+17/02/2026@20:22:27.121::Packet[00000630l]<<Serial [1] [/dev/tty.usbserial-A9OAID1K] Received 8 bytes.
+00|20|8A|00|22|00|01|81|  |  |  |  |  |  |  |   || N   N N " N N N
+
+17/02/2026@20:22:27.617::Packet[00000631l]<<Serial [1] [/dev/tty.usbserial-A9OAID1K] Received 8 bytes.
+00|20|8A|00|24|00|01|81|  |  |  |  |  |  |  |   || N   N N $ N N N
+
+17/02/2026@20:22:28.113::Packet[00000632l]<<Serial [1] [/dev/tty.usbserial-A9OAID1K] Received 8 bytes.
+00|20|8A|00|22|00|01|81|  |  |  |  |  |  |  |   || N   N N " N N N
+
+17/02/2026@20:22:28.625::Packet[00000633l]<<Serial [1] [/dev/tty.usbserial-A9OAID1K] Received 8 bytes.
+00|20|8A|00|22|00|01|81|  |  |  |  |  |  |  |   || N   N N " N N N
+
+17/02/2026@20:22:29.121::Packet[00000634l]<<Serial [1] [/dev/tty.usbserial-A9OAID1K] Received 8 bytes.
+00|20|8A|00|21|00|01|81|  |  |  |  |  |  |  |   || N   N N ! N N N
+
+17/02/2026@20:22:29.617::Packet[00000635l]<<Serial [1] [/dev/tty.usbserial-A9OAID1K] Received 8 bytes.
+00|20|8A|00|23|00|01|81|  |  |  |  |  |  |  |   || N   N N # N N N
+
+17/02/2026@20:22:30.129::Packet[00000636l]<<Serial [1] [/dev/tty.usbserial-A9OAID1K] Received 8 bytes.
+00|21|8A|00|23|00|01|81|  |  |  |  |  |  |  |   || N ! N N # N N N
+
+17/02/2026@20:22:30.625::Packet[00000637l]<<Serial [1] [/dev/tty.usbserial-A9OAID1K] Received 8 bytes.
+00|20|8A|00|22|00|01|81|  |  |  |  |  |  |  |   || N   N N " N N N
+
+17/02/2026@20:22:31.121::Packet[00000638l]<<Serial [1] [/dev/tty.usbserial-A9OAID1K] Received 8 bytes.
+00|20|8A|00|24|00|01|81|  |  |  |  |  |  |  |   || N   N N $ N N N
+
+17/02/2026@20:22:31.617::Packet[00000639l]<<Serial [1] [/dev/tty.usbserial-A9OAID1K] Received 8 bytes.
+00|20|8A|00|22|00|01|81|  |  |  |  |  |  |  |   || N   N N " N N N
+
+17/02/2026@20:22:32.129::Packet[00000640l]<<Serial [1] [/dev/tty.usbserial-A9OAID1K] Received 8 bytes.
+00|20|8A|00|23|00|01|81|  |  |  |  |  |  |  |   || N   N N # N N N
+
+17/02/2026@20:22:32.625::Packet[00000641l]<<Serial [1] [/dev/tty.usbserial-A9OAID1K] Received 8 bytes.
+00|20|8A|00|29|00|01|81|  |  |  |  |  |  |  |   || N   N N ) N N N
+
+17/02/2026@20:22:33.121::Packet[00000642l]<<Serial [1] [/dev/tty.usbserial-A9OAID1K] Received 8 bytes.
+00|20|8A|00|1B|00|01|81|  |  |  |  |  |  |  |   || N   N N N N N N
+
+17/02/2026@20:22:33.633::Packet[00000643l]<<Serial [1] [/dev/tty.usbserial-A9OAID1K] Received 8 bytes.
+00|20|8A|00|23|00|01|81|  |  |  |  |  |  |  |   || N   N N # N N N
+
+17/02/2026@20:22:34.148::Packet[00000644l]<<Serial [1] [/dev/tty.usbserial-A9OAID1K] Received 8 bytes.
+00|20|8A|00|26|00|01|81|  |  |  |  |  |  |  |   || N   N N & N N N
+
+17/02/2026@20:22:34.657::Packet[00000645l]<<Serial [1] [/dev/tty.usbserial-A9OAID1K] Received 8 bytes.
+00|20|8A|00|22|00|01|81|  |  |  |  |  |  |  |   || N   N N " N N N
+
+17/02/2026@20:22:35.153::Packet[00000646l]<<Serial [1] [/dev/tty.usbserial-A9OAID1K] Received 8 bytes.
+00|20|8A|00|22|00|01|81|  |  |  |  |  |  |  |   || N   N N " N N N
+
+17/02/2026@20:22:35.649::Packet[00000647l]<<Serial [1] [/dev/tty.usbserial-A9OAID1K] Received 8 bytes.
+00|20|8A|00|24|00|01|81|  |  |  |  |  |  |  |   || N   N N $ N N N
+
+17/02/2026@20:22:36.161::Packet[00000648l]<<Serial [1] [/dev/tty.usbserial-A9OAID1K] Received 8 bytes.
+00|20|8A|00|25|00|01|81|  |  |  |  |  |  |  |   || N   N N % N N N
+
+17/02/2026@20:22:36.657::Packet[00000649l]<<Serial [1] [/dev/tty.usbserial-A9OAID1K] Received 8 bytes.
+00|20|8A|00|23|00|01|81|  |  |  |  |  |  |  |   || N   N N # N N N
+
+17/02/2026@20:22:37.153::Packet[00000650l]<<Serial [1] [/dev/tty.usbserial-A9OAID1K] Received 8 bytes.
+00|20|8A|00|23|00|01|81|  |  |  |  |  |  |  |   || N   N N # N N N
+
+17/02/2026@20:22:37.652::Packet[00000651l]<<Serial [1] [/dev/tty.usbserial-A9OAID1K] Received 8 bytes.
+00|20|8A|00|26|00|01|81|  |  |  |  |  |  |  |   || N   N N & N N N
+
+17/02/2026@20:22:38.161::Packet[00000652l]<<Serial [1] [/dev/tty.usbserial-A9OAID1K] Received 8 bytes.
+00|20|8A|00|22|00|01|81|  |  |  |  |  |  |  |   || N   N N " N N N
+
+17/02/2026@20:22:38.657::Packet[00000653l]<<Serial [1] [/dev/tty.usbserial-A9OAID1K] Received 8 bytes.
+00|20|8A|00|22|00|01|81|  |  |  |  |  |  |  |   || N   N N " N N N
+
+17/02/2026@20:22:39.153::Packet[00000654l]<<Serial [1] [/dev/tty.usbserial-A9OAID1K] Received 8 bytes.
+00|20|8A|00|26|00|01|81|  |  |  |  |  |  |  |   || N   N N & N N N
+
+17/02/2026@20:22:39.665::Packet[00000655l]<<Serial [1] [/dev/tty.usbserial-A9OAID1K] Received 8 bytes.
+00|20|8A|00|22|00|01|81|  |  |  |  |  |  |  |   || N   N N " N N N
+
+17/02/2026@20:22:40.161::Packet[00000656l]<<Serial [1] [/dev/tty.usbserial-A9OAID1K] Received 8 bytes.
+00|20|8A|00|22|00|01|81|  |  |  |  |  |  |  |   || N   N N " N N N
+
+17/02/2026@20:22:40.657::Packet[00000657l]<<Serial [1] [/dev/tty.usbserial-A9OAID1K] Received 8 bytes.
+00|20|8A|00|22|00|01|81|  |  |  |  |  |  |  |   || N   N N " N N N
+
+17/02/2026@20:22:41.153::Packet[00000658l]<<Serial [1] [/dev/tty.usbserial-A9OAID1K] Received 8 bytes.
+00|20|8A|00|22|00|01|81|  |  |  |  |  |  |  |   || N   N N " N N N
+
+17/02/2026@20:22:41.665::Packet[00000659l]<<Serial [1] [/dev/tty.usbserial-A9OAID1K] Received 8 bytes.
+00|20|8A|00|23|00|01|81|  |  |  |  |  |  |  |   || N   N N # N N N
+
+17/02/2026@20:22:42.161::Packet[00000660l]<<Serial [1] [/dev/tty.usbserial-A9OAID1K] Received 8 bytes.
+00|20|8A|00|23|00|01|81|  |  |  |  |  |  |  |   || N   N N # N N N
+
+17/02/2026@20:22:42.657::Packet[00000661l]<<Serial [1] [/dev/tty.usbserial-A9OAID1K] Received 8 bytes.
+00|20|8A|00|25|00|01|81|  |  |  |  |  |  |  |   || N   N N % N N N
+
+17/02/2026@20:22:43.169::Packet[00000662l]<<Serial [1] [/dev/tty.usbserial-A9OAID1K] Received 8 bytes.
+00|20|8A|00|24|00|01|81|  |  |  |  |  |  |  |   || N   N N $ N N N
+
+17/02/2026@20:22:43.665::Packet[00000663l]<<Serial [1] [/dev/tty.usbserial-A9OAID1K] Received 8 bytes.
+00|20|8A|00|22|00|01|81|  |  |  |  |  |  |  |   || N   N N " N N N
+
+17/02/2026@20:22:44.161::Packet[00000664l]<<Serial [1] [/dev/tty.usbserial-A9OAID1K] Received 8 bytes.
+00|20|8A|00|25|00|01|81|  |  |  |  |  |  |  |   || N   N N % N N N
+
+17/02/2026@20:22:44.657::Packet[00000665l]<<Serial [1] [/dev/tty.usbserial-A9OAID1K] Received 8 bytes.
+00|20|8A|00|22|00|01|81|  |  |  |  |  |  |  |   || N   N N " N N N
+
+17/02/2026@20:22:45.169::Packet[00000666l]<<Serial [1] [/dev/tty.usbserial-A9OAID1K] Received 8 bytes.
+00|20|8A|00|23|00|01|81|  |  |  |  |  |  |  |   || N   N N # N N N
+
+17/02/2026@20:22:45.665::Packet[00000667l]<<Serial [1] [/dev/tty.usbserial-A9OAID1K] Received 8 bytes.
+00|20|8A|00|22|00|01|81|  |  |  |  |  |  |  |   || N   N N " N N N
+
+17/02/2026@20:22:46.161::Packet[00000668l]<<Serial [1] [/dev/tty.usbserial-A9OAID1K] Received 8 bytes.
+00|20|8A|00|22|00|01|81|  |  |  |  |  |  |  |   || N   N N " N N N
+
+17/02/2026@20:22:46.673::Packet[00000669l]<<Serial [1] [/dev/tty.usbserial-A9OAID1K] Received 8 bytes.
+00|20|8A|00|23|00|01|81|  |  |  |  |  |  |  |   || N   N N # N N N
+
+17/02/2026@20:22:47.169::Packet[00000670l]<<Serial [1] [/dev/tty.usbserial-A9OAID1K] Received 8 bytes.
+00|20|8A|00|22|00|01|81|  |  |  |  |  |  |  |   || N   N N " N N N
+
+17/02/2026@20:22:47.665::Packet[00000671l]<<Serial [1] [/dev/tty.usbserial-A9OAID1K] Received 8 bytes.
+00|20|8A|00|22|00|01|81|  |  |  |  |  |  |  |   || N   N N " N N N
+
+17/02/2026@20:22:48.177::Packet[00000672l]<<Serial [1] [/dev/tty.usbserial-A9OAID1K] Received 8 bytes.
+00|20|8A|00|22|00|01|81|  |  |  |  |  |  |  |   || N   N N " N N N
+
+17/02/2026@20:22:48.673::Packet[00000673l]<<Serial [1] [/dev/tty.usbserial-A9OAID1K] Received 8 bytes.
+00|20|8A|00|22|00|01|81|  |  |  |  |  |  |  |   || N   N N " N N N
+
+17/02/2026@20:22:49.169::Packet[00000674l]<<Serial [1] [/dev/tty.usbserial-A9OAID1K] Received 8 bytes.
+00|20|8A|00|28|00|01|81|  |  |  |  |  |  |  |   || N   N N ( N N N
+
+17/02/2026@20:22:49.665::Packet[00000675l]<<Serial [1] [/dev/tty.usbserial-A9OAID1K] Received 8 bytes.
+00|20|8A|00|22|00|01|81|  |  |  |  |  |  |  |   || N   N N " N N N
+
+17/02/2026@20:22:50.177::Packet[00000676l]<<Serial [1] [/dev/tty.usbserial-A9OAID1K] Received 8 bytes.
+00|20|8A|00|21|00|01|81|  |  |  |  |  |  |  |   || N   N N ! N N N
+
+17/02/2026@20:22:50.674::Packet[00000677l]<<Serial [1] [/dev/tty.usbserial-A9OAID1K] Received 8 bytes.
+00|20|8A|00|22|00|01|81|  |  |  |  |  |  |  |   || N   N N " N N N
+
+17/02/2026@20:22:51.169::Packet[00000678l]<<Serial [1] [/dev/tty.usbserial-A9OAID1K] Received 8 bytes.
+00|20|8A|00|23|00|01|81|  |  |  |  |  |  |  |   || N   N N # N N N
+
+17/02/2026@20:22:51.681::Packet[00000679l]<<Serial [1] [/dev/tty.usbserial-A9OAID1K] Received 8 bytes.
+00|20|8A|00|1D|00|01|81|  |  |  |  |  |  |  |   || N   N N N N N N
+
+17/02/2026@20:22:52.177::Packet[00000680l]<<Serial [1] [/dev/tty.usbserial-A9OAID1K] Received 8 bytes.
+00|20|8A|00|22|00|01|81|  |  |  |  |  |  |  |   || N   N N " N N N
+
+17/02/2026@20:22:52.673::Packet[00000681l]<<Serial [1] [/dev/tty.usbserial-A9OAID1K] Received 8 bytes.
+00|20|8A|00|22|00|01|81|  |  |  |  |  |  |  |   || N   N N " N N N
+
+17/02/2026@20:22:53.169::Packet[00000682l]<<Serial [1] [/dev/tty.usbserial-A9OAID1K] Received 8 bytes.
+00|20|8A|00|22|00|01|81|  |  |  |  |  |  |  |   || N   N N " N N N
+
+17/02/2026@20:22:53.681::Packet[00000683l]<<Serial [1] [/dev/tty.usbserial-A9OAID1K] Received 8 bytes.
+00|20|8A|00|22|00|01|81|  |  |  |  |  |  |  |   || N   N N " N N N
+
+17/02/2026@20:22:54.177::Packet[00000684l]<<Serial [1] [/dev/tty.usbserial-A9OAID1K] Received 7 bytes.
+00|20|31|24|00|01|81|  |  |  |  |  |  |  |  |   || N   1 $ N N N
+
+17/02/2026@20:22:54.673::Packet[00000685l]<<Serial [1] [/dev/tty.usbserial-A9OAID1K] Received 7 bytes.
+00|20|31|22|00|01|81|  |  |  |  |  |  |  |  |   || N   1 " N N N
+
+17/02/2026@20:22:55.185::Packet[00000686l]<<Serial [1] [/dev/tty.usbserial-A9OAID1K] Received 8 bytes.
+00|20|8A|00|22|00|01|81|  |  |  |  |  |  |  |   || N   N N " N N N
+
+17/02/2026@20:22:55.681::Packet[00000687l]<<Serial [1] [/dev/tty.usbserial-A9OAID1K] Received 8 bytes.
+00|20|8A|00|22|00|01|81|  |  |  |  |  |  |  |   || N   N N " N N N
+

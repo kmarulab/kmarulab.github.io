@@ -1,0 +1,26 @@
+[
+  {
+    "label": "SEM 2023 US",
+    "path": "tracks/sem_2023_us.json",
+    "kind": "generated",
+    "source_csv": "sem_2023_us.csv",
+    "length_m": 3850.0,
+    "point_count": 1926
+  },
+  {
+    "label": "SEM Speedway Demo",
+    "path": "tracks/sem_speedway_demo.json",
+    "kind": "bundled",
+    "source_csv": null,
+    "length_m": 1300.0,
+    "point_count": 651
+  },
+  {
+    "label": "Technical Infield Demo",
+    "path": "tracks/technical_infield_demo.json",
+    "kind": "bundled",
+    "source_csv": null,
+    "length_m": 975.0,
+    "point_count": 489
+  }
+]

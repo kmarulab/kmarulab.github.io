@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
+  <base href="./" />
+  <title>Hydrogen Race Strategy Lab</title>
+  <link rel="stylesheet" href="styles.css?v=2026-04-15-4" />
+  <script defer src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Hydrogen Fuel-Cell Race Strategy Lab</h1>
+    <p>Burn-and-coast strategy exploration for a wheel hub motor prototype vehicle.</p>
+  </header>
+
+  <main>
+    <section class="panel controls">
+      <h2>Scenario setup</h2>
+      <div class="grid two">
+        <label>Track
+          <select id="trackSelect"></select>
+        </label>
+        <label>Upload CSV track
+          <input id="trackUpload" type="file" accept=".csv,text/csv" />
+        </label>
+        <label>Event distance (m)
+          <input id="eventDistance" type="number" value="15400" step="10" />
+        </label>
+        <label>Time limit (s)
+          <input id="timeLimit" type="number" value="2100" step="5" />
+        </label>
+        <label>Mass (kg)
+          <input id="mass" type="number" value="185" step="1" />
+        </label>
+        <label>CdA (m²)
+          <input id="cda" type="number" value="0.19" step="0.01" />
+        </label>
+        <label>Rolling resistance Crr
+          <input id="crr" type="number" value="0.0045" step="0.0001" />
+        </label>
+        <label>Motor power max (W)
+          <input id="motorPower" type="number" value="1000" step="10" />
+        </label>
+        <label>Fuel-cell preferred power (W)
+          <input id="fcPreferred" type="number" value="420" step="10" />
+        </label>
+        <label>Fuel-cell peak usable power (W)
+          <input id="fcPeak" type="number" value="850" step="10" />
+        </label>
+        <label>Corner lateral accel limit (m/s²)
+          <input id="latAccel" type="number" value="1.40" step="0.05" />
+        </label>
+        <label>Absolute speed cap (m/s)
+          <input id="speedCap" type="number" value="12.0" step="0.2" />
+        </label>
+      </div>
+
+      <h2>Burn-and-coast controller</h2>
+      <div class="grid two">
+        <label>Burn trigger below speed (m/s)
+          <input id="burnOnThreshold" type="number" value="7.2" step="0.1" />
+        </label>
+        <label>Coast trigger above speed (m/s)
+          <input id="burnOffThreshold" type="number" value="9.2" step="0.1" />
+        </label>
+        <label>Corner lookahead (m)
+          <input id="lookahead" type="number" value="55" step="1" />
+        </label>
+        <label>Corner speed buffer (m/s)
+          <input id="cornerBuffer" type="number" value="0.8" step="0.1" />
+        </label>
+        <label>Pace bias
+          <input id="paceBias" type="range" min="0.8" max="1.2" value="1.0" step="0.01" />
+          <span id="paceBiasValue">1.00</span>
+        </label>
+        <label>Drive efficiency
+          <input id="driveEfficiency" type="number" value="0.90" step="0.01" />
+        </label>
+      </div>
+
+      <div class="actions">
+        <button id="runBtn">Run simulation</button>
+        <button id="downloadBtn">Download results JSON</button>
+      </div>
+      <div class="actions boundary-actions">
+        <button id="setLoopBtn" type="button">Set Full Loop On Map</button>
+        <button id="setStartBtn" type="button">Set Start On Map</button>
+        <button id="setFinishBtn" type="button">Set Finish On Map</button>
+        <button id="resetBoundaryBtn" type="button">Reset To Default Loop</button>
+      </div>
+      <p id="boundaryStatus" class="status-text">Start/finish editing is off. Choose a boundary button, then click a point on the track map.</p>
+      <p id="trackStatus" class="status-text">Load a bundled track or upload a CSV with latitude, longitude, and optional elevation columns.</p>
+      <p class="status-text">Fuel-cell power and energy exclude the horn, live telemetry system, and driver dashboard because those accessories are powered by a separate battery.</p>
+    </section>
+
+    <section class="panel metrics">
+      <h2>Key metrics</h2>
+      <div id="kpiGrid" class="kpi-grid"></div>
+    </section>
+
+    <section class="panel">
+      <h2>Interactive plots</h2>
+      <div id="mapPlot" class="plot"></div>
+      <div id="speedMapKphPlot" class="plot"></div>
+      <div id="speedMapMpsPlot" class="plot"></div>
+      <div id="speedPlot" class="plot"></div>
+      <div id="powerPlot" class="plot"></div>
+      <div id="energyPlot" class="plot"></div>
+      <div id="trackPlot" class="plot"></div>
+    </section>
+
+    <section class="panel">
+      <h2>Segment strategy summary</h2>
+      <div class="table-wrap">
+        <table id="segmentTable">
+          <thead>
+            <tr>
+              <th>Segment</th>
+              <th>Start (m)</th>
+              <th>End (m)</th>
+              <th>Mode</th>
+              <th>Mean speed (km/h)</th>
+              <th>Mean power (W)</th>
+              <th>Grade (%)</th>
+              <th>Curvature (1/m)</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Designed for GitHub Pages and direct CSV uploads. Drop in a measured track file and the maps and strategy plots update automatically.</p>
+  </footer>
+
+  <script defer src="app.js?v=2026-04-15-4"></script>
+</body>
+</html>

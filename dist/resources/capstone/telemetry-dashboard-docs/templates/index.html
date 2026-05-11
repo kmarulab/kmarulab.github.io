@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indy 500 Hydrogen Fuel Cell Telemetry</title>
+    <!-- Google Fonts for Modern Typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <!-- Top Bar -->
+    <header class="top-bar glass-panel">
+        <div class="logo">
+            <h1>INDY 500 <span class="hydrogen-text">H2 CORE</span></h1>
+        </div>
+        <div class="weather-widget">
+            <div class="weather-item">
+                <span class="label">AIR TEMP</span>
+                <span class="value" id="val-air-temp">-- °C</span>
+            </div>
+            <div class="weather-item">
+                <span class="label">TRACK TEMP</span>
+                <span class="value" id="val-track-temp">-- °C</span>
+            </div>
+            <div class="weather-item">
+                <span class="label">HUMIDITY</span>
+                <span class="value" id="val-humidity">-- %</span>
+            </div>
+        </div>
+        <div class="status-indicator">
+            <div class="dot pulse"></div>
+            <span>CARRTHMORE LIVE TELEMETRY</span>
+        </div>
+    </header>
+
+    <main class="dashboard-grid">
+        <!-- Left Column: Hydrogen System -->
+        <section class="panel h2-system glass-panel">
+            <h2>H2 FUEL CELL STATUS</h2>
+            
+            <div class="metrics-grid">
+                <div class="metric-card">
+                    <span class="label">VOLTAGE</span>
+                    <div class="value-container"><span class="value" id="val-voltage">--</span> V</div>
+                </div>
+                <div class="metric-card">
+                    <span class="label">CURRENT</span>
+                    <div class="value-container"><span class="value" id="val-current">--</span> A</div>
+                </div>
+                <div class="metric-card highlight">
+                    <span class="label">POWER</span>
+                    <div class="value-container"><span class="value" id="val-power">--</span> kW</div>
+                </div>
+                <div class="metric-card warning-check" id="card-temp">
+                    <span class="label">CORE TEMP</span>
+                    <div class="value-container"><span class="value" id="val-temp">--</span> °C</div>
+                </div>
+            </div>
+
+            <div class="flowmeter-section">
+                <h3>H2 FLOWRATE</h3>
+                <div class="flow-gauge-container">
+                    <div class="flow-bar-bg">
+                        <div class="flow-bar-fill" id="flow-bar"></div>
+                    </div>
+                    <div class="flow-value"><span id="val-flow">0.00</span> kg/h</div>
+                </div>
+            </div>
+
+            <div class="h2-chart-container" style="margin-top: 1.5rem; flex: 1; position: relative; min-height: 200px; display: flex; flex-direction: column;">
+                <div class="chart-controls" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 5px;">
+                    <select id="chart-metric-select" style="background: rgba(0,0,0,0.5); color: var(--accent-cyan); border: 1px solid var(--accent-cyan); padding: 4px; border-radius: 4px; outline: none; font-family: var(--font-body);">
+                        <option value="all">Plot: All Metrics</option>
+                        <option value="0">Amb Temp (°C)</option>
+                        <option value="1">Stack Temp (°C)</option>
+                        <option value="2">Stack V (V)</option>
+                        <option value="3">Stack I (A)</option>
+                        <option value="4">Stack P (W)</option>
+                        <option value="5">Bat V (V)</option>
+                    </select>
+                    <a href="/plots" style="color: var(--accent-red); font-size: 0.8rem; text-decoration: none; border: 1px solid var(--accent-red); padding: 4px 8px; border-radius: 4px; transition: all 0.2s;">VIEW FULL PLOTS ➡</a>
+                </div>
+                <div style="flex: 1; position: relative;">
+                    <canvas id="h2Chart"></canvas>
+                </div>
+            </div>
+        </section>
+
+        <!-- Center Column: Map & Primary Dynamics -->
+        <section class="panel center-panel glass-panel">
+            <div class="primary-dynamics">
+                <div class="speed-readout">
+                    <span class="value" id="val-speed">0</span>
+                    <span class="unit">KM/H</span>
+                </div>
+                <div class="g-force-widget">
+                    <div class="g-dot" id="g-dot"></div>
+                    <div class="crosshair"></div>
+                    <div class="g-value"><span id="val-accel">0.00</span> G</div>
+                </div>
+            </div>
+            
+            <div class="track-map-container">
+                <canvas id="trackCanvas"></canvas>
+            </div>
+        </section>
+
+        <!-- Right Column: MPU & Driver Inputs -->
+        <section class="panel driver-inputs glass-panel">
+            <h2>VEHICLE DYNAMICS</h2>
+            
+            <!-- MPU Data -->
+            <div class="mpu-section">
+                <div class="mpu-attitude">
+                    <div class="attitude-item">
+                        <span class="label">PITCH</span>
+                        <span class="value" id="val-pitch">0.00°</span>
+                    </div>
+                    <div class="attitude-item">
+                        <span class="label">ROLL</span>
+                        <span class="value" id="val-roll">0.00°</span>
+                    </div>
+                    <div class="attitude-item">
+                        <span class="label">YAW</span>
+                        <span class="value" id="val-yaw">0.00°</span>
+                    </div>
+                </div>
+                
+                <div class="ride-height-car">
+                    <div class="wheel fl"><span id="val-rh-fl">0</span> mm</div>
+                    <div class="wheel fr"><span id="val-rh-fr">0</span> mm</div>
+                    <div class="car-body"></div>
+                    <div class="wheel rl"><span id="val-rh-rl">0</span> mm</div>
+                    <div class="wheel rr"><span id="val-rh-rr">0</span> mm</div>
+                </div>
+            </div>
+
+            <!-- Driver Inputs -->
+            <div class="inputs-section">
+                <h3>DRIVER INPUTS</h3>
+                <div class="pedals">
+                    <div class="pedal-container throttle">
+                        <div class="pedal-bar throttle-bg">
+                            <div class="pedal-fill" id="bar-throttle"></div>
+                        </div>
+                        <span>THR</span>
+                    </div>
+                    <div class="pedal-container brake">
+                        <div class="pedal-bar brake-bg">
+                            <div class="pedal-fill" id="bar-brake"></div>
+                        </div>
+                        <span>BRK</span>
+                    </div>
+                </div>
+                
+                <div class="steering-wheel-container">
+                    <div class="steering-wheel" id="steering-wheel">
+                        <div class="wheel-mark"></div>
+                    </div>
+                    <div class="steering-value"><span id="val-steering">0.0</span>°</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Socket.IO & Chart.js Clients -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="/static/js/app.js"></script>
+</body>
+</html>
