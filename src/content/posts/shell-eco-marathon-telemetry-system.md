@@ -63,7 +63,7 @@ The project also forced useful engineering discipline. A model that cannot be ex
 ## Documentation
 
 - Project page: [Shell Eco-marathon Telemetry and Race Strategy](/projects/shell-eco-marathon-telemetry-and-race-strategy)
-- Draft report: [e90-draft-report.pdf](/resources/capstone/e90-draft-report.pdf)
-- Final presentation: [e90-final-presentation.pptx](/resources/capstone/e90-final-presentation.pptx)
+- Final report: [E90_Final_Report.pdf](/resources/capstone/E90_Final_Report.pdf)
+- Final presentation: [E90_Final_Presentation.pdf](/resources/capstone/E90_Final_Presentation.pdf)
 - Static simulator bundle: [race-strategy-simulator](/resources/capstone/race-strategy-simulator/index.html)
 
