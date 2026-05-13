@@ -11,7 +11,7 @@ My path into this area has moved from broad curiosity in mathematics, physics, c
 
 At Swarthmore, I have built this interest through embedded systems, OFDM simulation, software-defined radio work, and a senior capstone telemetry platform for a hydrogen fuel-cell Shell Eco-marathon vehicle. The capstone combines live telemetry, serial fuel-cell monitoring, dashboarding, and predictive burn-and-coast race strategy, which has become a useful way for me to think about hardware/software co-design under real constraints.
 
-I am also a non-executive director at Koseiteki Group Limited, a technology consulting firm supporting market-entry assessments and feasibility studies for companies entering the Kenyan and East African markets. The firm also performs technical due diligence for private equity and venture capital investment decisions, and consults on new product lines for telecom and wireless companies. I started this role in September 2024.
+I am also a Business Development Manager at Koseiteki Group Limited, a technology consulting firm supporting market-entry assessments and feasibility studies for companies entering the Kenyan and East African markets. The firm also performs technical due diligence for private equity and venture capital investment decisions, and consults on new product lines for telecom and wireless companies. I started this role in September 2024.
 
 ## Interests
 
