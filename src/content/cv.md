@@ -2,7 +2,7 @@
 name: "Kimaru Boruett"
 title: "Incoming PhD Student in Electrical and Computer Engineering"
 experience:
-  - role: "Non-Executive Director"
+  - role: "Business Development Manager"
     institution: "Koseiteki Group Limited"
     period: "September 2024 - Present"
     description: "Advise a technology consulting firm on market-entry assessments, feasibility studies for Kenya and East Africa, technical due diligence for PE/VC investments, and new product-line consulting for telecom and wireless companies."
